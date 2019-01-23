@@ -69,19 +69,32 @@
 # for i in range(10):
 #     print(getValue())
 
-def bar(foo):
-    def wrapper(a):
-        print("{:*^20}".format('BEGIN'))
-        foo(a)
-        print("{:*^20}".format('END'))
+# def bar(foo):
+#     def wrapper(a):
+#         print("{:*^20}".format('BEGIN'))
+#         foo(a)
+#         print("{:*^20}".format('END'))
+#
+#     return wrapper
+#
+# @bar
+# def printA(a):
+#     print("这是变量{}".format(a))
+#
+# printA("python123")
 
-    return wrapper
+"""
+装饰器函数必须返回一个函数对象引用
+否则，无法利用语法糖
+因此，需要在内部定义一个函数
+最好都用wrapper这个名字
 
-@bar
-def printA(a):
-    print("这是变量{}".format(a))
+装饰器使用场景
+1）对原函数功能的补充：测量时间、增加打印等
+2）对原函数功能的调整：利用原函数运行结果，再次运算产生新的结果
+3）对原函数功能的重写：只是借助原来的名字，谨慎修改旧函数
 
-printA("python123")
+"""
 
 # format基本用法
 # 不带编号，即{}
@@ -97,3 +110,4 @@ printA("python123")
 
 # format进阶用法
 # <（默认）左对齐 >右对齐   ^ 中间对齐
+
