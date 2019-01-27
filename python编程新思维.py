@@ -207,6 +207,10 @@ maxsplit: 最大分割数，剩余部分作为最后一个元素输出
 re.finditer(pattern,string,flags=0)
 搜索字符串，返回一个匹配结果的迭代类型，每个迭代元素是match对象
 
+功能函数6： sub()
+re.sub()
+在一个字符串中替换所有匹配正则表达式的子串，返回替换后的字符串
+ 
 """
 # import re
 # ls = re.findall(r'[1-9]\d{5}', 'BIT100081 TSU100084')
@@ -219,3 +223,9 @@ re.finditer(pattern,string,flags=0)
 # print(lo)
 
 # 1.2 python常用标准库解析（上）4
+
+# import re
+# for m in re.finditer(r'[1-9]\d{5}', 'BIT100081 TSU100084'):
+#     if m:
+#         print(m.group(0))       # 每个结果m是一个match的对象
+
