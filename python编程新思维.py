@@ -208,8 +208,14 @@ re.finditer(pattern,string,flags=0)
 搜索字符串，返回一个匹配结果的迭代类型，每个迭代元素是match对象
 
 功能函数6： sub()
-re.sub()
+re.sub(pattern, repl, string, count=0, flags=0)
 在一个字符串中替换所有匹配正则表达式的子串，返回替换后的字符串
+repl: 替换匹配字符串的字符串
+string：待匹配字符串
+count： 匹配的最大替换数
+flags： 正则表达式使用时的控制标记
+
+
  
 """
 # import re
@@ -229,3 +235,109 @@ re.sub()
 #     if m:
 #         print(m.group(0))       # 每个结果m是一个match的对象
 
+# import re
+# r_sub = re.sub(r'[1-9]\d{5}', ':zipcode', 'BIT100081 TSU100084')
+# print(r_sub)
+
+# re库的使用方法
+# 方法一，函数式用法：一次性操作
+# import re
+# rst = re.search(r'[1-9]\d{5}', 'BIT 100081')
+# print(rst)
+
+# 方法二，面向对象用法： 编译后的多次操作
+# import re
+# pat = re.compile('r[1-9]\d{5}')     # 一次编译
+# rst = pat.search('BIT 100081')      # 编译后的多次使用
+# print(rst)
+
+"""
+re.compile()函数的使用
+regex = re.compile(pattern, flags=0)
+将正则表达式的字符串形式编译成正则表达式对象
+直接用：
+regex.search()
+regex.match()
+regex.findall()
+regex.split()
+regex.finditer()
+regex.sub()
+调用其他方法即可
+
+"""
+
+"""
+match对象：
+match对象是一次匹配的结果，包括匹配的各种信息
+match是一个对象，也就是一个类
+
+match对象的属性如下：
+.string：待匹配的文本
+.re : 匹配时使用的pattern对象（正则表达式）
+.pos: 正则表达式搜索文本的开始位置
+.endpos: 正则表达式搜索文本的结束位置
+.group(0): 获得匹配后的字符串
+.start(): 匹配字符串在原始字符串的开始位置
+.end(): 匹配字符串在原始字符串的结束位置
+.span():  返回 (.start(), .end())
+
+
+小结：
+re库的主要函数（7个）：
+基础函数： compile（）
+功能函数： search（）、match（）、findall（）、split（）、
+finditer（）、sub（）
+compile()的用法、match对象
+
+"""
+
+# 蒙特卡罗猜测： 计算机匹配正则表达式
+# 输入： 一个正则表达式，由程序员给出
+# 程序：  随机产生字符串，匹配正则表达式
+# 计时： 统计时间及猜测次数
+
+"""
+需求的真实应用
+1）正则表达式代表病毒片段
+2）任何文件都可以表示为十六进制字符的组合形式
+3）匹配：病毒引擎的扫描过程
+
+"""
+
+"""
+练习题1：
+蒙特卡洛猜测： 计算机匹配正则表达式
+正则表达式： r'[1-2][^2-8][D-F]0+[A-f]'
+随机字符串： 32个字符长度，字母表示0-9，A-Z，十六进制字符
+输出： 匹配次数、匹配字符串、程序关键部分所用时间（5位小数）
+
+"""
+# import time, random, re
+#
+# def genStr():
+#     global sigma
+#     s = ""
+#     # 循环32次，生成32位字符长度的随机字符
+#     for i in range(32):
+#         s += sigma[random.randint(0, 15)]
+#     return s
+#
+# sigma = "0123456789ABCDEF"
+# # 匹配次数
+# count = 0
+# regex = re.compile(r'[1-2][^2-8][D-F]0+[A-f]')
+# # 程序关键部分所用的时间
+# start_time = time.perf_counter()
+# match = regex.search(genStr())
+# while not match:
+#     count += 1
+#     match = regex.search(genStr())
+#
+# print("程序匹配： 猜测{}次， {}->{}".format(count, match.string, match.group(0)))
+# # match.string  待匹配的文本  match.group(0) 匹配后的字符串
+# end_time = time.perf_counter()
+# # 程序用时
+# print("程序用时：{}秒".format(end_time-start_time))
+
+
+# 1.4 python常用标准库解析中
