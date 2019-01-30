@@ -341,3 +341,92 @@ compile()的用法、match对象
 
 
 # 1.4 python常用标准库解析中
+
+# os库的使用
+# os库提供通用的、基本的操作系统交互功能
+# os库提供了几百个与文件系统、操作系统功能相关的函数
+# 常用路径操作、进程管理、环境参数等几类
+"""
+路径操作： os.path子库，处理文件路径及信息
+进程管理： 启动系统中其他程序
+环境参数： 获得系统软硬件信息等环境参数
+"""
+
+"""
+os.path子库以path为入口，用于操作和处理文件路径
+import os.path
+或 import os.path as op
+"""
+
+"""
+函数1  os.path.abspath(path) 
+返回path在当前系统中的绝对路径
+"""
+# import os.path
+# print(os.path.abspath('python123.txt'))
+
+"""
+函数2  os.path.normpath(path) 
+归一化path的表示形式，统一用\\分隔路径
+"""
+
+# import os.path
+# print(os.path.normpath("E://learnPython//learnPython//python123.txt"))
+
+"""
+函数3 os.path.relpath(path)
+返回当前程序与文件之间的相对路径（relative path）
+"""
+
+# import os.path
+# print(os.path.relpath('E:\learnPython\learnPython\python123.txt'))
+
+"""
+函数4 os.path.dirname(path)
+返回path中的目录名称
+"""
+
+# import os.path
+# print(os.path.dirname('E:\learnPython\learnPython\python123.txt'))
+
+"""
+函数5 os.path.basename(path)
+返回path中最后的文件名称
+"""
+
+# import os.path
+# # print(os.path.basename('E:\learnPython\learnPython\python123.txt'))
+
+"""
+函数6 os.path.join(path, *path)
+组合path与paths， 返回一个路径字符串
+
+"""
+#
+# import os.path
+# print(os.path.join("E:/", "learnPython/learnPython/python123.txt"))
+
+"""
+函数7  os.path.exists(path)
+判断path对应文件或目录是否存在，返回True或False
+
+"""
+
+# import os.path
+# print(os.path.exists('E:/learnPython/learnPython/python1234.txt'))
+
+"""
+函数8 os.path.isfile(path)
+判断path所对应是否为已存在的文件，返回True或False
+
+"""
+
+# import os.path
+# print(os.path.isfile('E:/learnPython/learnPython/python123.txt'))
+
+"""
+函数9 os.path.isdir(path)
+判断path所对用是否为已存在的目录，返回True或False
+
+"""
+

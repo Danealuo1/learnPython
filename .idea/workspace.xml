@@ -16,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/python编程新思维.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="342" column="16" lean-forward="true" selection-start-line="342" selection-start-column="16" selection-end-line="342" selection-end-column="16" />
+            <state relative-caret-position="318">
+              <caret line="426" lean-forward="true" selection-start-line="426" selection-end-line="426" />
             </state>
           </provider>
         </entry>
@@ -61,8 +61,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1008" />
-    <option name="y" value="22" />
+    <option name="x" value="1006" />
+    <option name="y" value="20" />
     <option name="width" value="920" />
     <option name="height" value="1035" />
   </component>
@@ -164,15 +164,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="807" y="18" width="736" height="828" extended-state="0" />
+    <frame x="805" y="16" width="736" height="828" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.30484694" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.3042857" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32902297" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3275862" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39913544" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -207,8 +207,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/python编程新思维.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="342" column="16" lean-forward="true" selection-start-line="342" selection-start-column="16" selection-end-line="342" selection-end-column="16" />
+        <state relative-caret-position="318">
+          <caret line="426" lean-forward="true" selection-start-line="426" selection-end-line="426" />
         </state>
       </provider>
     </entry>
